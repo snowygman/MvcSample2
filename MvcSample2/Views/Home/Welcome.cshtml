@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome</h2>
+
+<ul>
+    @for (int i = 0; i < ViewBag.NumTimes; i++)
+    {
+        <li>@ViewBag.Message</li>
+    }
+
+
+</ul>
+
+@{
+    // this is a block of code. For demonstration purposes,
+    // we'll create a "model" inline.
+    var items = new string[] { "one", "two", "three" };
+}
+<html>
+<head>
+    <title>Sample View</title>
+</head>
+<body>
+    <h1>Listing @items.Length items.</h1>
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>The item name is @item.</li>
+        }
+    </ul>
+</body>
+</html>

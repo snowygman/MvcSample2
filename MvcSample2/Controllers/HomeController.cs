@@ -15,7 +15,7 @@ namespace MvcSample2.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "I can do all things...";
 
             return View();
         }
@@ -26,5 +26,21 @@ namespace MvcSample2.Controllers
 
             return View();
         }
+
+        public ActionResult Welcome(string name, int numtimes = 1)
+        {
+            ViewBag.Message = "Hello " + name;
+            ViewBag.Numtimes = numtimes;
+            return View();
+        }
+
+        ////etra
+        //public ActionResult Store()
+        //{
+        //    ViewBag.Message = "Your Store page.";
+
+        //    return View();
+        //}
+
     }
 }
