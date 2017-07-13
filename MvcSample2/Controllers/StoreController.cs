@@ -22,6 +22,12 @@ namespace MvcSample2.Controllers
         //{
         //    return "Hello from Store.Index()";
         //}
+        public ActionResult Browse()
+        {
+            ViewBag.Title = "Store -> Catalog";
+            return View();
+        }
+
 
         // GET: /Store/Browse?genre=drama
         public string Browse(string genre)
